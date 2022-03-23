@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:ramadanapp/screens/home_page/home_page.dart';
 import 'screens/sehri Iftar Doa/sehri_iftar.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       designSize: ScreenUtil.defaultSize,
       builder: () => GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: (SehriIftar()),
+        home: (HomePage()),
       ),
     );
   }
