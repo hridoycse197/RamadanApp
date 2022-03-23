@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:ramadanapp/screens/sehri_iftar_doa.dart';
+import 'screens/sehri Iftar Doa/sehri_iftar.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   runApp(const MyApp());
 }
 
@@ -14,7 +17,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: ScreenUtil.defaultSize,
-        builder: () => GetMaterialApp(home: SehriIftarDoa()));
+      designSize: ScreenUtil.defaultSize,
+      builder: () => GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: (SehriIftar()),
+      ),
+    );
   }
 }
