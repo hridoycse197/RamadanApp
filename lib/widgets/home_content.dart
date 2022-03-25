@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ramadanapp/screens/sehri%20Iftar%20Doa/sehri_iftar.dart';
 import 'package:ramadanapp/widgets/grid_design.dart';
 
 class HomeContant extends StatelessWidget {

@@ -3,7 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:ramadanapp/screens/home_page/home_page.dart';
-import 'screens/sehri Iftar Doa/sehri_iftar.dart';
+import 'package:ramadanapp/screens/roja_vongo/roja_vongo.dart';
+import 'package:ramadanapp/screens/sehriIftarDoa/sehri_iftar.dart';
+import 'package:ramadanapp/screens/tarabihsalat/tarabih_salat.dart';
+import 'package:ramadanapp/screens/tasbih/tasbih.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -21,7 +24,7 @@ class MyApp extends StatelessWidget {
       designSize: ScreenUtil.defaultSize,
       builder: () => GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: (HomePage()),
+        home: (Tasbih()),
       ),
     );
   }

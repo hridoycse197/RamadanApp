@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ramadanapp/screens/sehri%20Iftar%20Doa/widgets/heading_widget.dart';
-import 'package:ramadanapp/screens/sehri%20Iftar%20Doa/widgets/listview_widget.dart';
+import 'package:ramadanapp/screens/tasbih/widgets/listview_widget.dart';
+
 import 'package:ramadanapp/utils/assets_link.dart';
 import 'package:ramadanapp/utils/color/colors.dart';
 import 'package:ramadanapp/utils/data_text.dart';
 import 'package:ramadanapp/widgets/appbar_widget.dart';
+import 'package:ramadanapp/widgets/page_heading_widget.dart';
 import 'package:ramadanapp/widgets/text_widget.dart';
 
-class SehriIftar extends StatelessWidget {
-  const SehriIftar({Key? key}) : super(key: key);
+class RojaVongo extends StatelessWidget {
+  const RojaVongo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +21,13 @@ class SehriIftar extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(kToolbarHeight),
-          child: AppbarWidget(title: Datatext.iftar_sehri_appbar_title)),
+          child: AppbarWidget(title: Datatext.roja_vongo_appbar_title)),
       body: SafeArea(
           child: Column(
         children: [
-          Container(
-            height: height * 0.18,
-            child: HeadingWidget(),
-          ),
+          PageHeadingWidget(
+              containerheight: height * 0.24,
+              imagelink: AssetLink.roja_vongo_image),
           Container(
             padding: EdgeInsets.only(
               left: width * 0.02,
