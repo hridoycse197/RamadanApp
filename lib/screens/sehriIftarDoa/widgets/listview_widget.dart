@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ramadanapp/utils/assets_link.dart';
+import 'package:ramadanapp/widgets/page_alltextwidget.dart';
 
 import '../../../utils/color/colors.dart';
 import '../../../utils/data_text.dart';
-
-import 'alltextwidget.dart';
 
 class ListviewWidget extends StatelessWidget {
   const ListviewWidget({

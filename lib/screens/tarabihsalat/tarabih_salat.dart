@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'package:ramadanapp/screens/sehriIftarDoa/widgets/listview_widget.dart';
+import 'package:ramadanapp/screens/tarabihsalat/widgets/listview_widget.dart';
 
 import 'package:ramadanapp/utils/assets_link.dart';
 import 'package:ramadanapp/utils/color/colors.dart';
@@ -10,8 +9,8 @@ import 'package:ramadanapp/widgets/appbar_widget.dart';
 import 'package:ramadanapp/widgets/page_heading_widget.dart';
 import 'package:ramadanapp/widgets/text_widget.dart';
 
-class SehriIftar extends StatelessWidget {
-  const SehriIftar({Key? key}) : super(key: key);
+class TarabihSalat extends StatelessWidget {
+  const TarabihSalat({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +21,17 @@ class SehriIftar extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(kToolbarHeight),
-          child: AppbarWidget(title: Datatext.iftar_sehri_appbar_title)),
+          child: AppbarWidget(title: Datatext.tarabih_salat_appbar_title)),
       body: SafeArea(
           child: Column(
         children: [
-          PageHeadingWidget(
-              containerheight: height * 0.24,
-              imagelink: AssetLink.sehri_iftar_image),
+          Container(
+            alignment: Alignment.center,
+            height: height * 0.24,
+            child: PageHeadingWidget(
+                containerheight: height * 0.24,
+                imagelink: AssetLink.tarabih_image),
+          ),
           Container(
             padding: EdgeInsets.only(
               left: width * 0.02,

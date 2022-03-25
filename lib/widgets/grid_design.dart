@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ramadanapp/model/item_model.dart';
-import 'package:ramadanapp/screens/sehri%20Iftar%20Doa/sehri_iftar.dart';
+import 'package:ramadanapp/screens/roja_vongo/roja_vongo.dart';
+import 'package:ramadanapp/screens/tarabihsalat/tarabih_salat.dart';
+
 import 'package:ramadanapp/widgets/views.dart';
+
+import '../screens/sehriIftarDoa/sehri_iftar.dart';
 
 class GridDesign extends StatelessWidget {
   final itemList = [
@@ -39,7 +43,16 @@ class GridDesign extends StatelessWidget {
       title: 'রোজা ভঙ্গের কারন এবং মাকরুহ সমূহ',
     ),
   ];
-
+  final pagelist = [
+    SehriIftar(),
+    SehriIftar(),
+    SehriIftar(),
+    TarabihSalat(),
+    SehriIftar(),
+    SehriIftar(),
+    null,
+    RojaVongo(),
+  ];
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -61,7 +74,7 @@ class GridDesign extends StatelessWidget {
             ? Container()
             : InkWell(
                 onTap: (() {
-                  Get.to(SehriIftar(),
+                  Get.to(pagelist[index],
                       transition: Transition.circularReveal,
                       duration: Duration(seconds: 1));
                 }),
