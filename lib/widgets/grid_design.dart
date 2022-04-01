@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ramadanapp/model/item_model.dart';
+import 'package:ramadanapp/screens/home_page/ramadan_date_time_page.dart';
 import 'package:ramadanapp/screens/roja_vongo/roja_vongo.dart';
 import 'package:ramadanapp/screens/tarabihsalat/tarabih_salat.dart';
+import 'package:ramadanapp/screens/tasbih/tasbih.dart';
 
 import 'package:ramadanapp/widgets/views.dart';
 
@@ -44,12 +46,12 @@ class GridDesign extends StatelessWidget {
     ),
   ];
   final pagelist = [
-    SehriIftar(),
+    RamadanDateTime(),
     SehriIftar(),
     SehriIftar(),
     TarabihSalat(),
-    SehriIftar(),
-    SehriIftar(),
+    Tasbih(),
+    Tasbih(),
     null,
     RojaVongo(),
   ];

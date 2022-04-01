@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+
 import 'package:lottie/lottie.dart';
-import 'package:ramadanapp/screens/tarabihsalat/widgets/listview_widget.dart';
 
 import 'package:ramadanapp/utils/assets_link.dart';
 import 'package:ramadanapp/utils/color/colors.dart';
 import 'package:ramadanapp/utils/data_text.dart';
+
 import 'package:ramadanapp/widgets/appbar_widget.dart';
-import 'package:ramadanapp/widgets/page_heading_widget.dart';
+
 import 'package:ramadanapp/widgets/text_widget.dart';
 
-import '../../controller/controller.dart';
+import '../../controller/tasbih_controller.dart';
 
 class Tasbih extends StatelessWidget {
   Tasbih({Key? key}) : super(key: key);
-  Controller controller = Get.put(Controller());
+  TasbihController controller = Get.put(TasbihController());
   TextEditingController textEditingController = TextEditingController();
 
   @override
@@ -24,11 +24,16 @@ class Tasbih extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
 
     double width = MediaQuery.of(context).size.width;
-    ;
+
     return Scaffold(
       appBar: PreferredSize(
-          preferredSize: Size.fromHeight(kToolbarHeight),
-          child: AppbarWidget(title: Datatext.tarabih_salat_appbar_title)),
+        preferredSize: const Size.fromHeight(
+          kToolbarHeight,
+        ),
+        child: AppbarWidget(
+          title: Datatext.tarabih_salat_appbar_title,
+        ),
+      ),
       body: SafeArea(
         child: Column(
           children: [
@@ -55,7 +60,7 @@ class Tasbih extends StatelessWidget {
                 BoxShadow(
                   color: AppColor.black,
                   blurRadius: width * 0.20,
-                  offset: Offset(0.1, .1),
+                  offset: const Offset(0.1, 0.1),
                   spreadRadius: MediaQuery.of(context).size.width * 0.001,
                 )
               ]),
@@ -83,7 +88,7 @@ class Tasbih extends StatelessWidget {
               onPressed: () {
                 controller.increment();
               },
-              child: Icon(Icons.add),
+              child: const Icon(Icons.add),
             ),
             Divider(
               height: height * 0.03,

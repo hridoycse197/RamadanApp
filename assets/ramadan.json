@@ -1,0 +1,214 @@
+[
+    {
+        "ramadan": "1",
+        "date": "3",
+        "sahri": "04:27",
+        "iftar": "06:19",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "2",
+        "date": "4",
+        "sahri": "04:26",
+        "iftar": "06:19",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "3",
+        "date": "5",
+        "sahri": "04:24",
+        "iftar": "06:20",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "4",
+        "date": "6",
+        "sahri": "04:24",
+        "iftar": "06:20",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "5",
+        "date": "7",
+        "sahri": "04:23",
+        "iftar": "06:21",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "6",
+        "date": "8",
+        "sahri": "04:22",
+        "iftar": "06:21",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "7",
+        "date": "9",
+        "sahri": "04:21",
+        "iftar": "06:21",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "8",
+        "date": "10",
+        "sahri": "04:20",
+        "iftar": "06:22",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "9",
+        "date": "11",
+        "sahri": "04:19",
+        "iftar": "06:22",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "10",
+        "date": "12",
+        "sahri": "04:18",
+        "iftar": "06:23",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "11",
+        "date": "13",
+        "sahri": "04:17",
+        "iftar": "06:23",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "12",
+        "date": "14",
+        "sahri": "04:15",
+        "iftar": "06:23",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "13",
+        "date": "15",
+        "sahri": "04:14",
+        "iftar": "06:24",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "14",
+        "date": "16",
+        "sahri": "04:13",
+        "iftar": "06:24",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "15",
+        "date": "17",
+        "sahri": "04:12",
+        "iftar": "06:24",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "16",
+        "date": "18",
+        "sahri": "04:11",
+        "iftar": "06:25",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "17",
+        "date": "19",
+        "sahri": "04:10",
+        "iftar": "06:25",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "18",
+        "date": "20",
+        "sahri": "04:09",
+        "iftar": "06:26",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "19",
+        "date": "21",
+        "sahri": "04:08",
+        "iftar": "06:26",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "20",
+        "date": "22",
+        "sahri": "04:07",
+        "iftar": "06:27",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "21",
+        "date": "23",
+        "sahri": "04:06",
+        "iftar": "06:27",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "22",
+        "date": "24",
+        "sahri": "04:05",
+        "iftar": "06:28",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "23",
+        "date": "25",
+        "sahri": "04:05",
+        "iftar": "06:28",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "24",
+        "date": "26",
+        "sahri": "04:04",
+        "iftar": "06:29",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "25",
+        "date": "27",
+        "sahri": "04:03",
+        "iftar": "06:29",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "26",
+        "date": "28",
+        "sahri": "04:02",
+        "iftar": "06:29",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "27",
+        "date": "29",
+        "sahri": "04:01",
+        "iftar": "06:30",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "28",
+        "date": "30",
+        "sahri": "04:00",
+        "iftar": "06:30",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "29",
+        "date": "1",
+        "sahri": "03:59",
+        "iftar": "06:31",
+        "calenderImage":"assets/icons/calendar2.png"
+    },
+    {
+        "ramadan": "30",
+        "date": "2",
+        "sahri": "03:58",
+        "iftar": "06:31",
+        "calenderImage":"assets/icons/calendar2.png"
+    }
+    
+   
+]

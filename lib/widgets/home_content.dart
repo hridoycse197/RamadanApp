@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 import 'package:ramadanapp/widgets/grid_design.dart';
 
 class HomeContant extends StatelessWidget {
@@ -12,9 +12,9 @@ class HomeContant extends StatelessWidget {
       child: Column(
         children: [
           GridDesign(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: const Divider(
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Divider(
               thickness: 1,
               color: Colors.black,
               height: 1,
