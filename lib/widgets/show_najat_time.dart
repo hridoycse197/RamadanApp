@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:ramadanapp/model/ramadan_date_model.dart';
 import 'package:flutter/services.dart' as rootBundle;
 
-class ShowRamadanTime extends StatelessWidget {
-  ShowRamadanTime({Key? key}) : super(key: key);
+class ShowNajatTime extends StatelessWidget {
+  ShowNajatTime({Key? key}) : super(key: key);
 
   Future<List<RamadanDateModel>> readData() async {
     final jsonData =
-        await rootBundle.rootBundle.loadString('assets/rohomot.json');
+        await rootBundle.rootBundle.loadString('assets/najat.json');
     final list = json.decode(jsonData) as List<dynamic>;
     return list.map((e) => RamadanDateModel.fromJson(e)).toList();
   }

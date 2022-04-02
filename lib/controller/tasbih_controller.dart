@@ -3,7 +3,7 @@ import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
 class TasbihController extends GetxController {
-  var counter = RxInt(0);
+  var counter = 0.obs;
   TextEditingController editingController = TextEditingController();
   RxString controllerText = ''.obs;
 

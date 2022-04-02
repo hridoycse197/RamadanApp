@@ -27,8 +27,9 @@ class SehriIftar extends StatelessWidget {
           child: Column(
         children: [
           PageHeadingWidget(
-              containerheight: height * 0.24,
-              imagelink: AssetLink.sehri_iftar_image),
+            containerheight: height * 0.24,
+            imagelink: AssetLink.sehri_iftar_image,
+          ),
           Container(
             padding: EdgeInsets.only(
               left: width * 0.02,
