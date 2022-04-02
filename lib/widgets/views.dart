@@ -14,13 +14,13 @@ class Views extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             offset: const Offset(-1, -1),
-            blurRadius: 5,
-            spreadRadius: 1,
+            blurRadius: 3,
+            spreadRadius: 2,
             color: Colors.grey.shade500,
           ),
-          BoxShadow(
-            offset: const Offset(-2, -2),
-            blurRadius: 15,
+          const BoxShadow(
+            offset: Offset(2, 2),
+            blurRadius: 5,
             spreadRadius: 2,
             color: Colors.white,
           ),
@@ -46,6 +46,6 @@ class Views extends StatelessWidget {
         ],
       ),
     );
-    ;
+
   }
 }
