@@ -3,14 +3,18 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:ramadanapp/screens/home_page/home_page.dart';
-import 'package:ramadanapp/screens/roja_vongo/roja_vongo.dart';
-import 'package:ramadanapp/screens/sehriIftarDoa/sehri_iftar.dart';
-import 'package:ramadanapp/screens/tarabihsalat/tarabih_salat.dart';
-import 'package:ramadanapp/screens/tasbih/tasbih.dart';
+import 'package:ramadanapp/screens/home_page/ramadan_date_time_page.dart';
 
 void main() {
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
+
   SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+    ),
+  );
   runApp(const MyApp());
 }
 
@@ -22,9 +26,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: ScreenUtil.defaultSize,
-      builder: () => GetMaterialApp(
+      builder: () => const GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: (Tasbih()),
+        home: HomePage(),
       ),
     );
   }

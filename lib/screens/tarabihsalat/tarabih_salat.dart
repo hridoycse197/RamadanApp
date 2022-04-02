@@ -29,8 +29,9 @@ class TarabihSalat extends StatelessWidget {
             alignment: Alignment.center,
             height: height * 0.24,
             child: PageHeadingWidget(
-                containerheight: height * 0.24,
-                imagelink: AssetLink.tarabih_image),
+              containerheight: height * 0.24,
+              imagelink: AssetLink.tarabih_image,
+            ),
           ),
           Container(
             padding: EdgeInsets.only(
