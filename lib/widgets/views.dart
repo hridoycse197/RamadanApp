@@ -33,6 +33,7 @@ class Views extends StatelessWidget {
         children: [
           Image.asset(
             itemModel.image.toString(),
+            // fit: BoxFit.fill,
             scale: 2,
           ),
           const SizedBox(

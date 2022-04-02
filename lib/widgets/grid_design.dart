@@ -8,6 +8,7 @@ import 'package:ramadanapp/screens/tarabihsalat/tarabih_salat.dart';
 import 'package:ramadanapp/screens/tasbih/tasbih.dart';
 
 import 'package:ramadanapp/widgets/views.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../screens/sehriIftarDoa/sehri_iftar.dart';
 
@@ -93,10 +94,20 @@ class GridDesign extends StatelessWidget {
 }
 
 class GridDesign2 extends StatelessWidget {
+  final String url = 'https://play.google.com/store/apps';
+
+  launchUrl(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Cannot launch $url';
+    }
+  }
+
   final itemList = [
     ItemModel(
-      image: 'assets/icons/calendar.png',
-      title: 'রমজান সময়সূচী ২০২২',
+      image: 'assets/icons/appIcon.png',
+      title: 'আরও অ্যাপস',
     ),
     ItemModel(
       image: 'assets/icons/mosque.png',
@@ -133,14 +144,27 @@ class GridDesign2 extends StatelessWidget {
             ? Container()
             : InkWell(
                 onTap: (() {
-                  Get.to(pagelist[index],
-                      transition: Transition.circularReveal,
-                      duration: Duration(seconds: 1));
+                  index == 0 ? launchUrl(url) : null;
+                  index == 1
+                      ? Get.snackbar(
+                          'test',
+                          'message',
+                          snackPosition: SnackPosition.BOTTOM,
+                        )
+                      : null;
+                  index == 2
+                      ? Get.snackbar(
+                          'also test',
+                          'message',
+                          snackPosition: SnackPosition.BOTTOM,
+                        )
+                      : null;
                 }),
                 child: Views(
                   itemModel: ItemModel(
-                      image: itemList[index].image,
-                      title: itemList[index].title),
+                    image: itemList[index].image,
+                    title: itemList[index].title,
+                  ),
                 ),
               );
       },
