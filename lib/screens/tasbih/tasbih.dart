@@ -35,112 +35,102 @@ class Tasbih extends StatelessWidget {
         ),
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            Container(
-              alignment: Alignment.center,
-              height: height * 0.24,
-              child: Column(
-                children: [
-                  AppbarBottom(),
-                  LottieBuilder.asset(
-                    AssetLink.sehri_iftar_image,
-                    animate: true,
-                    height: height * 0.19,
-                    width: width * 1,
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: height * .01,
-            ),
-            Container(
-              decoration: BoxDecoration(boxShadow: [
-                BoxShadow(
-                  color: AppColor.black,
-                  blurRadius: width * 0.20,
-                  offset: const Offset(0.1, 0.1),
-                  spreadRadius: MediaQuery.of(context).size.width * 0.001,
-                )
-              ]),
-              child: CircleAvatar(
-                backgroundColor: AppColor.white,
-                radius: MediaQuery.of(context).size.width * .09,
-                child: Obx(
-                  () => TextWidget(
-                      text: controller.counter.string,
-                      color: AppColor.appbarcolor,
-                      fontsize: 22),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: height * .01,
-            ),
-            ElevatedButton(
-              style: ButtonStyle(
-                minimumSize:
-                    MaterialStateProperty.all(Size(width * .2, height * 0.06)),
-                backgroundColor:
-                    MaterialStateProperty.all(AppColor.appbarcolor),
-              ),
-              onPressed: () {
-                controller.increment();
-              },
-              child: const Icon(Icons.add),
-            ),
-            Divider(
-              height: height * 0.03,
-              endIndent: width * 0.08,
-              indent: width * .08,
-              thickness: height * 0.004,
-              color: AppColor.appbarcolor,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-              child: Container(
-                width: double.infinity,
-                height: height * 0.17,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15.h),
-                  ),
-                ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                alignment: Alignment.center,
+                height: height * 0.24,
                 child: Column(
                   children: [
-                    TextFormField(
-                      controller: controller.editingController,
-                      decoration: InputDecoration(
-                        isDense: true,
-                        contentPadding: EdgeInsets.zero,
-                        border: InputBorder.none,
-                        prefix: TextWidget(
-                            text: Datatext.tasbih_page_target,
-                            color: AppColor.appbarcolor,
-                            fontsize: 19),
-                      ),
-                    ),
-                    ElevatedButton(
-                      style: ButtonStyle(
-                        minimumSize: MaterialStateProperty.all(
-                            Size(width - width * .10, height * 0.06)),
-                        backgroundColor:
-                            MaterialStateProperty.all(AppColor.appbarcolor),
-                      ),
-                      onPressed: () {
-                        controller.reset();
-                      },
-                      child: TextWidget(
-                          text: 'রিসেট করুন',
-                          color: AppColor.white,
-                          fontsize: 20),
+                    AppbarBottom(),
+                    LottieBuilder.asset(
+                      AssetLink.sehri_iftar_image,
+                      animate: true,
+                      height: height * 0.19,
+                      width: width * 1,
                     ),
                   ],
                 ),
               ),
-            ),
-          ],
+              SizedBox(
+                height: height * .01,
+              ),
+              Container(
+                decoration: BoxDecoration(boxShadow: [
+                  BoxShadow(
+                    color: AppColor.black,
+                    blurRadius: width * 0.20,
+                    offset: const Offset(0.1, 0.1),
+                    spreadRadius: MediaQuery.of(context).size.width * 0.001,
+                  )
+                ]),
+                child: CircleAvatar(
+                  backgroundColor: AppColor.white,
+                  radius: MediaQuery.of(context).size.width * .09,
+                  child: Obx(
+                    () => TextWidget(
+                        text: controller.counter.string,
+                        color: AppColor.appbarcolor,
+                        fontsize: 22),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: height * .01,
+              ),
+              ElevatedButton(
+                style: ButtonStyle(
+                  minimumSize: MaterialStateProperty.all(
+                      Size(width * .2, height * 0.06)),
+                  backgroundColor:
+                      MaterialStateProperty.all(AppColor.appbarcolor),
+                ),
+                onPressed: () {
+                  controller.increment();
+                },
+                child: const Icon(Icons.add),
+              ),
+              Divider(
+                height: height * 0.03,
+                endIndent: width * 0.08,
+                indent: width * .08,
+                thickness: height * 0.004,
+                color: AppColor.appbarcolor,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+                child: Container(
+                  width: double.infinity,
+                  height: height * 0.17,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(15.h),
+                    ),
+                  ),
+                  child: Column(
+                    children: [
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: MaterialStateProperty.all(
+                              Size(width - width * .10, height * 0.06)),
+                          backgroundColor:
+                              MaterialStateProperty.all(AppColor.appbarcolor),
+                        ),
+                        onPressed: () {
+                          controller.reset();
+                        },
+                        child: TextWidget(
+                            text: 'রিসেট করুন',
+                            color: AppColor.white,
+                            fontsize: 20),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ramadanapp/controller/tasbih_controller.dart';
 import 'package:ramadanapp/widgets/home_content.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,6 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+    TasbihController controller = TasbihController();
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -27,7 +29,6 @@ class HomePage extends StatelessWidget {
             color: Colors.white,
             height: height - (height * 0.25),
           ),
-          // Text('data')
         ],
       ),
     );

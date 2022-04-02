@@ -9,6 +9,7 @@ class RamadanDateTime extends StatefulWidget {
 }
 
 class _RamadanDateTimeState extends State<RamadanDateTime> {
+  String district = 'Dhaka';
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -17,8 +18,53 @@ class _RamadanDateTimeState extends State<RamadanDateTime> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(
-            "Dhaka",
+          actions: [
+            DropdownButton<String>(
+              style: TextStyle(color: Colors.blue),
+              hint: Row(
+                children: <Widget>[
+                  Text(
+                    district,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Icon(
+                      Icons.arrow_downward,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                  ),
+                ],
+              ),
+              value: district,
+              items: <String>[
+                'Dhaka',
+                'Rajshahi',
+                'Sylhet',
+                'Mymensingh',
+                'Khulna',
+                'Chittagong',
+                'Barisal',
+                'Rangpur'
+              ].map((value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+              onChanged: (value) {
+                setState(() {
+                  district = value!;
+                });
+              },
+            )
+          ],
+          title: Text(
+            district,
           ),
           centerTitle: true,
           bottom: const TabBar(
@@ -46,7 +92,7 @@ class _RamadanDateTimeState extends State<RamadanDateTime> {
         ),
         body: TabBarView(
           children: [
-            ShowRamadanTime(),
+            ShowRamadanTime(division: district),
             Container(),
             Container(),
           ],
