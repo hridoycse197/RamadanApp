@@ -43,14 +43,6 @@ class Tasbih extends StatelessWidget {
                 height: height * 0.24,
                 child: Column(
                   children: [
-<<<<<<< HEAD
-                    AppbarBottom(),
-                    LottieBuilder.asset(
-                      AssetLink.sehri_iftar_image,
-                      animate: true,
-                      height: height * 0.19,
-                      width: width * 1,
-=======
                     TextFormField(
                       keyboardType: TextInputType.number,
                       onChanged: (value) => controller.editingController,
@@ -85,7 +77,6 @@ class Tasbih extends StatelessWidget {
                         color: AppColor.white,
                         fontsize: 20,
                       ),
->>>>>>> 3524015f3d758a31e14667072839dbae32cd8bbb
                     ),
                     Text(controller.editingController.text)
                   ],
