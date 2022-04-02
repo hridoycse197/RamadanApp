@@ -18,7 +18,7 @@ class SelectDivision extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('আপনার বিভাগ নির্বাচন করুন'),
+        title: const Text('আপনার বিভাগ নির্বাচন করুন'),
         backgroundColor: AppColor.appbarcolor,
       ),
       body: ListView.builder(
