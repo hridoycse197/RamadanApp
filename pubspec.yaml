@@ -37,8 +37,13 @@ dependencies:
   get: ^4.6.1
   audioplayers: ^0.20.1
   lottie: ^1.2.2
+<<<<<<< HEAD
   intl: ^0.17.0
   tuple: ^2.0.0
+=======
+  url_launcher: ^6.0.20
+
+>>>>>>> 3524015f3d758a31e14667072839dbae32cd8bbb
 dev_dependencies:
   flutter_test:
     sdk: flutter

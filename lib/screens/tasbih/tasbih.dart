@@ -43,13 +43,51 @@ class Tasbih extends StatelessWidget {
                 height: height * 0.24,
                 child: Column(
                   children: [
+<<<<<<< HEAD
                     AppbarBottom(),
                     LottieBuilder.asset(
                       AssetLink.sehri_iftar_image,
                       animate: true,
                       height: height * 0.19,
                       width: width * 1,
+=======
+                    TextFormField(
+                      keyboardType: TextInputType.number,
+                      onChanged: (value) => controller.editingController,
+                      controller: controller.editingController,
+                      decoration: InputDecoration(
+                        isDense: true,
+                        contentPadding: EdgeInsets.zero,
+                        border: InputBorder.none,
+                        prefix: TextWidget(
+                            text: Datatext.tasbih_page_target,
+                            color: AppColor.appbarcolor,
+                            fontsize: 19),
+                      ),
                     ),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        minimumSize: MaterialStateProperty.all(
+                          Size(
+                            width - width * .10,
+                            height * 0.06,
+                          ),
+                        ),
+                        backgroundColor: MaterialStateProperty.all(
+                          AppColor.appbarcolor,
+                        ),
+                      ),
+                      onPressed: () {
+                        controller.reset();
+                      },
+                      child: TextWidget(
+                        text: 'রিসেট করুন',
+                        color: AppColor.white,
+                        fontsize: 20,
+                      ),
+>>>>>>> 3524015f3d758a31e14667072839dbae32cd8bbb
+                    ),
+                    Text(controller.editingController.text)
                   ],
                 ),
               ),
