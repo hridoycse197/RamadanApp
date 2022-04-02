@@ -110,6 +110,8 @@ class Tasbih extends StatelessWidget {
                 child: Column(
                   children: [
                     TextFormField(
+                      keyboardType: TextInputType.number,
+                      onChanged: (value) => controller.editingController,
                       controller: controller.editingController,
                       decoration: InputDecoration(
                         isDense: true,
@@ -124,18 +126,25 @@ class Tasbih extends StatelessWidget {
                     ElevatedButton(
                       style: ButtonStyle(
                         minimumSize: MaterialStateProperty.all(
-                            Size(width - width * .10, height * 0.06)),
-                        backgroundColor:
-                            MaterialStateProperty.all(AppColor.appbarcolor),
+                          Size(
+                            width - width * .10,
+                            height * 0.06,
+                          ),
+                        ),
+                        backgroundColor: MaterialStateProperty.all(
+                          AppColor.appbarcolor,
+                        ),
                       ),
                       onPressed: () {
                         controller.reset();
                       },
                       child: TextWidget(
-                          text: 'রিসেট করুন',
-                          color: AppColor.white,
-                          fontsize: 20),
+                        text: 'রিসেট করুন',
+                        color: AppColor.white,
+                        fontsize: 20,
+                      ),
                     ),
+                    Text(controller.editingController.text)
                   ],
                 ),
               ),

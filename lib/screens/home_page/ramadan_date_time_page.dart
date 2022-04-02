@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ramadanapp/utils/color/colors.dart';
+import 'package:ramadanapp/widgets/show_magfirat_time.dart';
+import 'package:ramadanapp/widgets/show_najat_time.dart';
 import 'package:ramadanapp/widgets/show_ramadan_time.dart';
 
 class RamadanDateTime extends StatefulWidget {
@@ -17,6 +20,7 @@ class _RamadanDateTimeState extends State<RamadanDateTime> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: AppColor.appbarcolor,
           title: const Text(
             "Dhaka",
           ),
@@ -47,8 +51,8 @@ class _RamadanDateTimeState extends State<RamadanDateTime> {
         body: TabBarView(
           children: [
             ShowRamadanTime(),
-            Container(),
-            Container(),
+            ShowMagfiratTime(),
+            ShowNajatTime(),
           ],
         ),
       ),
