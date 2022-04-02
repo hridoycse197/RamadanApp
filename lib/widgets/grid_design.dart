@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ramadanapp/model/item_model.dart';
-import 'package:ramadanapp/screens/home_page/ramadan_date_time_page.dart';
+
 import 'package:ramadanapp/screens/roja_vongo/roja_vongo.dart';
 import 'package:ramadanapp/screens/select_division.dart';
 import 'package:ramadanapp/screens/tarabihsalat/tarabih_salat.dart';
@@ -63,7 +63,7 @@ class GridDesign extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return GridView.builder(
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       padding: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 20),
       //physics: NeverScrollableScrollPhysics(),
       itemCount: itemList.length,
@@ -79,14 +79,17 @@ class GridDesign extends StatelessWidget {
             ? Container()
             : InkWell(
                 onTap: (() {
-                  Get.to(pagelist[index],
-                      transition: Transition.circularReveal,
-                      duration: Duration(seconds: 1));
+                  Get.to(
+                    pagelist[index],
+                    transition: Transition.circularReveal,
+                    duration: const Duration(seconds: 1),
+                  );
                 }),
                 child: Views(
                   itemModel: ItemModel(
-                      image: itemList[index].image,
-                      title: itemList[index].title),
+                    image: itemList[index].image,
+                    title: itemList[index].title,
+                  ),
                 ),
               );
       },
