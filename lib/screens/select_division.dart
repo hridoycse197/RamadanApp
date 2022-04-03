@@ -16,6 +16,7 @@
 //     'বরিশাল বিভাগ',
 //   ];
 
+<<<<<<< HEAD
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
@@ -43,3 +44,27 @@
 //     );
 //   }
 // }
+=======
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('আপনার বিভাগ নির্বাচন করুন'),
+        backgroundColor: AppColor.appbarcolor,
+      ),
+      body: ListView.builder(
+        itemCount: _divisionList.length,
+        itemBuilder: (context, index) {
+          return Card(
+            child: Container(
+              alignment: Alignment.center,
+              height: 50,
+              child: Text(_divisionList[index]),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+>>>>>>> d3573934ff4038f4ae05361e9f212b1e455265fb
