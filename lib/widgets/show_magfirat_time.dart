@@ -1,15 +1,28 @@
 import 'dart:convert';
-
+import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:ramadanapp/model/ramadan_date_model.dart';
 import 'package:flutter/services.dart' as rootBundle;
 
-class ShowMagfiratTime extends StatelessWidget {
-  ShowMagfiratTime({Key? key}) : super(key: key);
+class ShowMagfiratTime extends StatefulWidget {
+  String division;
+  int increase;
+  ShowMagfiratTime({Key? key, required this.division, required this.increase})
+      : super(key: key);
 
+  @override
+  State<ShowMagfiratTime> createState() => _ShowMagfiratTime();
+}
+
+class _ShowMagfiratTime extends State<ShowMagfiratTime> {
+  final monthanddate = DateFormat('MMMM-dd');
+
+  final sehreiiftarformate = DateFormat('hh:mm');
+
+//   void addtime(String timezone) {
   Future<List<RamadanDateModel>> readData() async {
     final jsonData =
-        await rootBundle.rootBundle.loadString('assets/magfirat.json');
+    await rootBundle.rootBundle.loadString('assets/magfirat.json');
     final list = json.decode(jsonData) as List<dynamic>;
     return list.map((e) => RamadanDateModel.fromJson(e)).toList();
   }
@@ -45,10 +58,28 @@ class ShowMagfiratTime extends StatelessWidget {
                           child: Stack(
                             alignment: Alignment.center,
                             children: [
-                              Image.asset(
-                                items[index].calenderImage.toString(),
-                                alignment: Alignment.center,
-                                scale: 1.4,
+                              Stack(
+                                children: [
+                                  Image.asset(
+                                    items[index].calenderImage.toString(),
+                                    alignment: Alignment.center,
+                                    scale: 1.4,
+                                  ),
+                                  Positioned(
+                                    top: height * 0.08,
+                                    left: width * 0.046,
+                                    child: Text(
+                                      monthanddate
+                                          .format(
+                                        DateTime.utc(2022, 4, index + 3),
+                                      )
+                                          .toString(),
+                                      style: TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ],
                               ),
                               Positioned(
                                   height: 25,
@@ -75,7 +106,14 @@ class ShowMagfiratTime extends StatelessWidget {
                             children: [
                               Text(
                                 'সাহরীর শেষ সময় - ভোর ' +
-                                    items[index].sehriTime.toString() +
+                                    sehreiiftarformate.format(DateTime.parse(
+                                        '2022-04-03 ' +
+                                            items[index]
+                                                .sehriTime
+                                                .toString() +
+                                            ':00')
+                                        .add(Duration(
+                                        minutes: widget.increase))) +
                                     ' মিনিট',
                                 style: const TextStyle(
                                   fontSize: 16,
@@ -83,7 +121,14 @@ class ShowMagfiratTime extends StatelessWidget {
                               ),
                               Text(
                                 'ইফতার এর সময় - সন্ধ্যা ' +
-                                    items[index].iftarTime.toString() +
+                                    sehreiiftarformate.format(DateTime.parse(
+                                        '2022-04-03 ' +
+                                            items[index]
+                                                .iftarTime
+                                                .toString() +
+                                            ':00')
+                                        .add(Duration(
+                                        minutes: widget.increase))) +
                                     ' মিনিট',
                                 style: const TextStyle(
                                   fontSize: 16,

@@ -10,6 +10,7 @@ import 'package:ramadanapp/screens/tasbih/tasbih.dart';
 import 'package:ramadanapp/widgets/views.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../screens/home_page/ramadan_date_time_page.dart';
 import '../screens/sehriIftarDoa/sehri_iftar.dart';
 
 class GridDesign extends StatelessWidget {
@@ -48,7 +49,7 @@ class GridDesign extends StatelessWidget {
     ),
   ];
   final pagelist = [
-    RamadanDateTime(),
+    SelectDivision(),
     SehriIftar(),
     SehriIftar(),
     TarabihSalat(),
