@@ -1,7 +1,7 @@
-// import 'package:flutter/material.dart';
-// import 'package:get/get.dart';
-// import 'package:ramadanapp/screens/home_page/ramadan_date_time_page.dart';
-// import 'package:ramadanapp/utils/color/colors.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ramadanapp/screens/home_page/ramadan_date_time_page.dart';
+import 'package:ramadanapp/utils/color/colors.dart';
 
 // class SelectDivision extends StatelessWidget {
 //   SelectDivision({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@
 //     'বরিশাল বিভাগ',
 //   ];
 
-<<<<<<< HEAD
+
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
@@ -44,7 +44,7 @@
 //     );
 //   }
 // }
-=======
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,4 +67,4 @@
     );
   }
 }
->>>>>>> d3573934ff4038f4ae05361e9f212b1e455265fb
+
