@@ -22,7 +22,7 @@ class _ShowNajatTime extends State<ShowNajatTime> {
 //   void addtime(String timezone) {
   Future<List<RamadanDateModel>> readData() async {
     final jsonData =
-    await rootBundle.rootBundle.loadString('assets/najat.json');
+        await rootBundle.rootBundle.loadString('assets/najat.json');
     final list = json.decode(jsonData) as List<dynamic>;
     return list.map((e) => RamadanDateModel.fromJson(e)).toList();
   }
@@ -71,8 +71,8 @@ class _ShowNajatTime extends State<ShowNajatTime> {
                                     child: Text(
                                       monthanddate
                                           .format(
-                                        DateTime.utc(2022, 4, index + 3),
-                                      )
+                                            DateTime.utc(2022, 4, index + 21),
+                                          )
                                           .toString(),
                                       style: TextStyle(
                                           fontSize: 15,
@@ -107,13 +107,13 @@ class _ShowNajatTime extends State<ShowNajatTime> {
                               Text(
                                 'সাহরীর শেষ সময় - ভোর ' +
                                     sehreiiftarformate.format(DateTime.parse(
-                                        '2022-04-03 ' +
-                                            items[index]
-                                                .sehriTime
-                                                .toString() +
-                                            ':00')
+                                            '2022-04-03 ' +
+                                                items[index]
+                                                    .sehriTime
+                                                    .toString() +
+                                                ':00')
                                         .add(Duration(
-                                        minutes: widget.increase))) +
+                                            minutes: widget.increase))) +
                                     ' মিনিট',
                                 style: const TextStyle(
                                   fontSize: 16,
@@ -122,13 +122,13 @@ class _ShowNajatTime extends State<ShowNajatTime> {
                               Text(
                                 'ইফতার এর সময় - সন্ধ্যা ' +
                                     sehreiiftarformate.format(DateTime.parse(
-                                        '2022-04-03 ' +
-                                            items[index]
-                                                .iftarTime
-                                                .toString() +
-                                            ':00')
+                                            '2022-04-03 ' +
+                                                items[index]
+                                                    .iftarTime
+                                                    .toString() +
+                                                ':00')
                                         .add(Duration(
-                                        minutes: widget.increase))) +
+                                            minutes: widget.increase))) +
                                     ' মিনিট',
                                 style: const TextStyle(
                                   fontSize: 16,

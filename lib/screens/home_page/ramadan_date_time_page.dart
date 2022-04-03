@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ramadanapp/controller/tasbih_controller.dart';
+import 'package:ramadanapp/widgets/show_magfirat_time.dart';
 import 'package:ramadanapp/widgets/show_najat_time.dart';
 import 'package:ramadanapp/widgets/show_ramadan_time.dart';
 
@@ -16,12 +17,11 @@ class RamadanDateTime extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
-
     return DefaultTabController(
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: Text( division.toString()),
+          title: Text(division.toString()),
           centerTitle: true,
           bottom: const TabBar(
             tabs: [
@@ -52,7 +52,7 @@ class RamadanDateTime extends StatelessWidget {
               division: division,
               increase: incress,
             ),
-            ShowRamadanTime(division: division, increase: incress),
+            ShowMagfiratTime(division: division, increase: incress),
             ShowNajatTime(division: division, increase: incress),
           ],
         ),
