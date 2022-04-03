@@ -142,7 +142,8 @@ class Tasbih extends StatelessWidget {
                       ElevatedButton(
                         style: ButtonStyle(
                           minimumSize: MaterialStateProperty.all(
-                              Size(width - width * .10, height * 0.06)),
+                            Size(width - width * .10, height * 0.06),
+                          ),
                           backgroundColor:
                               MaterialStateProperty.all(AppColor.appbarcolor),
                         ),
