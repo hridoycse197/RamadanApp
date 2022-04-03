@@ -2,7 +2,7 @@ class Datatext {
   //tasbih
   static const String iftar_sehri_appbar_title = 'সেহরি ও ইফতারের দোয়া';
   //niot and iftar
-  static const String tasbih_page_target = 'টার্গেট সেট করুন ';
+  static const String tasbih_page_title = 'তাসবিহ কাউন্টার';
   static const String niot_title = '* সেহরির দোয়া (রোজার নিয়ত):';
   static const String niot_arbi =
       'نَوَيْتُ اَنْ اُصُوْمَ غَدًا مِّنْ شَهْرِ رَمْضَانَ الْمُبَارَكِ فَرْضَا لَكَ يَا اللهُ فَتَقَبَّل مِنِّى اِنَّكَ اَنْتَ السَّمِيْعُ الْعَلِيْم ';

@@ -24,24 +24,12 @@ class GridDesign extends StatelessWidget {
       title: 'সেহেরি এবং ইফতারের দোয়া',
     ),
     ItemModel(
-      image: 'assets/icons/kaaba.png',
-      title: 'কিবলা কম্পাস',
-    ),
-    ItemModel(
       image: 'assets/icons/mosque-1.png',
       title: 'তারাবির সালাতের নিয়ম',
     ),
     ItemModel(
-      image: 'assets/icons/calculator.png',
-      title: 'যাকাত ক্যালকুলেটর',
-    ),
-    ItemModel(
       image: 'assets/icons/beads.png',
       title: 'তাসবিহ কাউন্টার',
-    ),
-    ItemModel(
-      image: null,
-      title: null,
     ),
     ItemModel(
       image: 'assets/icons/prohibition.png',
@@ -51,11 +39,8 @@ class GridDesign extends StatelessWidget {
   final pagelist = [
     SelectDivision(),
     SehriIftar(),
-    SehriIftar(),
     TarabihSalat(),
     Tasbih(),
-    Tasbih(),
-    null,
     RojaVongo(),
   ];
 

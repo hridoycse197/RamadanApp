@@ -20,7 +20,10 @@ class HomeContant extends StatelessWidget {
               height: 1,
             ),
           ),
-          GridDesign2()
+          SizedBox(
+            height: height * 0.20,
+          ),
+          GridDesign2(),
         ],
       ),
     );

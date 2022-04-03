@@ -17,38 +17,6 @@ class SelectDivision extends StatelessWidget {
     'বরিশাল বিভাগ',
   ];
 
-// <<<<<<< HEAD
-//
-// //   @override
-// //   Widget build(BuildContext context) {
-// //     return Scaffold(
-// //       appBar: AppBar(
-// //         title: Text('আপনার বিভাগ নির্বাচন করুন'),
-// //         backgroundColor: AppColor.appbarcolor,
-// //       ),
-// //       body: ListView.builder(
-// //         itemCount: _divisionList.length,
-// //         itemBuilder: (context, index) {
-// //           return GestureDetector(
-// //             onTap: () {
-// //               Get.to(RamadanDateTime(divisionname: index));
-// //             },
-// //             child: Card(
-// //               child: Container(
-// //                 alignment: Alignment.center,
-// //                 height: 50,
-// //                 child: Text(_divisionList[index]),
-// //               ),
-// //             ),
-// //           );
-// //         },
-// //       ),
-// //     );
-// //   }
-// // }
-//
-// =======
-// >>>>>>> 7b7baad1d1097fe8ede146d20b33f136e36d1811
   @override
   Widget build(BuildContext context) {
     String district;
@@ -59,6 +27,7 @@ class SelectDivision extends StatelessWidget {
         backgroundColor: AppColor.appbarcolor,
       ),
       body: ListView.builder(
+        //shrinkWrap: true,
         itemCount: _divisionList.length,
         itemBuilder: (context, index) {
           return GestureDetector(
@@ -89,14 +58,26 @@ class SelectDivision extends StatelessWidget {
                 increase = 1;
               }
 
-              Get.to(RamadanDateTime(division: district, incress: increase,),);
+              Get.to(
+                RamadanDateTime(
+                  division: district,
+                  incress: increase,
+                ),
+              );
             },
-            child: Card(
-              child: Container(
-                alignment: Alignment.center,
-                height: 50,
-                child: Text(_divisionList[index]),
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Card(
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 50,
+                    child: Text(
+                      _divisionList[index],
+                    ),
+                  ),
+                ),
+              ],
             ),
           );
         },

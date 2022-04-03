@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 
 import 'package:lottie/lottie.dart';
 
-import 'package:ramadanapp/utils/assets_link.dart';
 import 'package:ramadanapp/utils/color/colors.dart';
 import 'package:ramadanapp/utils/data_text.dart';
 
@@ -31,7 +30,7 @@ class Tasbih extends StatelessWidget {
           kToolbarHeight,
         ),
         child: AppbarWidget(
-          title: Datatext.tarabih_salat_appbar_title,
+          title: Datatext.tasbih_page_title,
         ),
       ),
       body: SafeArea(
