@@ -47,7 +47,7 @@ class GridDesign extends StatelessWidget {
     ),
   ];
   final pagelist = [
-    SelectDivision(),
+    RamadanDateTime(),
     SehriIftar(),
     SehriIftar(),
     TarabihSalat(),
