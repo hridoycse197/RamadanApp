@@ -38,48 +38,11 @@ class Tasbih extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              Lottie.asset('assets/images/tasbih.json', height: height * .25),
               Container(
                 alignment: Alignment.center,
-                height: height * 0.24,
                 child: Column(
-                  children: [
-                    TextFormField(
-                      keyboardType: TextInputType.number,
-                      onChanged: (value) => controller.editingController,
-                      controller: controller.editingController,
-                      decoration: InputDecoration(
-                        isDense: true,
-                        contentPadding: EdgeInsets.zero,
-                        border: InputBorder.none,
-                        prefix: TextWidget(
-                            text: Datatext.tasbih_page_target,
-                            color: AppColor.appbarcolor,
-                            fontsize: 19),
-                      ),
-                    ),
-                    ElevatedButton(
-                      style: ButtonStyle(
-                        minimumSize: MaterialStateProperty.all(
-                          Size(
-                            width - width * .10,
-                            height * 0.06,
-                          ),
-                        ),
-                        backgroundColor: MaterialStateProperty.all(
-                          AppColor.appbarcolor,
-                        ),
-                      ),
-                      onPressed: () {
-                        controller.reset();
-                      },
-                      child: TextWidget(
-                        text: 'রিসেট করুন',
-                        color: AppColor.white,
-                        fontsize: 20,
-                      ),
-                    ),
-                    Text(controller.editingController.text)
-                  ],
+                  children: [Text(controller.editingController.text)],
                 ),
               ),
               SizedBox(
