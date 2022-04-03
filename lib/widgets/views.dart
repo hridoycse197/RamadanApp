@@ -8,6 +8,10 @@ class Views extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: 8,
+        vertical: 1,
+      ),
       alignment: Alignment.center,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
@@ -31,21 +35,26 @@ class Views extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(
-            itemModel.image.toString(),
-            // fit: BoxFit.fill,
-            scale: 2,
+          Expanded(
+            flex: 2,
+            child: Image.asset(
+              itemModel.image.toString(),
+              // fit: BoxFit.fill,
+              scale: 2,
+            ),
           ),
           const SizedBox(
             height: 5,
           ),
-          Text(
-            itemModel.title.toString(),
-            textAlign: TextAlign.center,
+          Expanded(
+            flex: 1,
+            child: Text(
+              itemModel.title.toString(),
+              textAlign: TextAlign.center,
+            ),
           ),
         ],
       ),
     );
-
   }
 }
