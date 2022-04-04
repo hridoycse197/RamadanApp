@@ -24,7 +24,7 @@ class GridDesign extends StatelessWidget {
       title: 'সেহেরি এবং ইফতারের দোয়া',
     ),
     ItemModel(
-      image: 'assets/icons/mosque-1.png',
+      image: 'assets/icons/islamic.png',
       title: 'তারাবির সালাতের নিয়ম',
     ),
     ItemModel(
@@ -38,10 +38,10 @@ class GridDesign extends StatelessWidget {
   ];
   final pagelist = [
     SelectDivision(),
-    SehriIftar(),
-    TarabihSalat(),
+    const SehriIftar(),
+    const TarabihSalat(),
     Tasbih(),
-    RojaVongo(),
+    const RojaVongo(),
   ];
 
   @override
@@ -49,7 +49,7 @@ class GridDesign extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return GridView.builder(
-      physics: const NeverScrollableScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       padding: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 20),
       //physics: NeverScrollableScrollPhysics(),
       itemCount: itemList.length,
@@ -58,7 +58,7 @@ class GridDesign extends StatelessWidget {
         crossAxisCount: 3,
         crossAxisSpacing: width * 0.036,
         mainAxisSpacing: height * 0.03,
-        childAspectRatio: 1 / 1,
+        childAspectRatio: 1.2 / 1.4,
       ),
       itemBuilder: (context, index) {
         return index == 6
@@ -85,6 +85,8 @@ class GridDesign extends StatelessWidget {
 
 class GridDesign2 extends StatelessWidget {
   final String url = 'https://play.google.com/store/apps';
+
+  GridDesign2({Key? key}) : super(key: key);
 
   launchUrl(String url) async {
     if (await canLaunch(url)) {

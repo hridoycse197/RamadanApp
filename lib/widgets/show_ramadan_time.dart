@@ -47,50 +47,51 @@ class _ShowRamadanTimeState extends State<ShowRamadanTime> {
               return Card(
                 child: Container(
                   height: height * 0.2,
-                  //width: width * 0.02,
+                  width: width * 0.02,
                   child: Row(
                     children: [
                       Expanded(
                         flex: 1,
                         child: Container(
-                          height: double.infinity,
+                          alignment: Alignment.center,
+                          //height: double.infinity,
                           // color: Colors.blue,
                           child: Stack(
                             alignment: Alignment.center,
                             children: [
-                              Stack(
+                              Image.asset(
+                                items[index].calenderImage.toString(),
+                                alignment: Alignment.center,
+                                scale: 1.4,
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Image.asset(
-                                    items[index].calenderImage.toString(),
-                                    alignment: Alignment.center,
-                                    scale: 1.4,
+                                  const SizedBox(
+                                    height: 5,
                                   ),
-                                  Positioned(
-                                    top: height * 0.08,
-                                    left: width * 0.046,
-                                    child: Text(
-                                      monthanddate
-                                          .format(
-                                            DateTime.utc(2022, 4, index + 3),
-                                          )
-                                          .toString(),
-                                      style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.bold),
+                                  Text(
+                                    items[index].ramadanNumber.toString(),
+                                    textAlign: TextAlign.center,
+                                    // ignore: prefer_const_constructors
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    monthanddate
+                                        .format(
+                                          DateTime.utc(2022, 4, index + 3),
+                                        )
+                                        .toString(),
+                                    style: const TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                 ],
                               ),
-                              Positioned(
-                                  height: 25,
-                                  child: Text(
-                                    items[index].ramadanNumber.toString(),
-                                    // ignore: prefer_const_constructors
-                                    style: TextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ))
                             ],
                           ),
                         ),

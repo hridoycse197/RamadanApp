@@ -8,10 +8,6 @@ class Views extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: 8,
-        vertical: 1,
-      ),
       alignment: Alignment.center,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
@@ -25,7 +21,7 @@ class Views extends StatelessWidget {
           const BoxShadow(
             offset: Offset(2, 2),
             blurRadius: 5,
-            spreadRadius: 2,
+            spreadRadius: 1,
             color: Colors.white,
           ),
         ],
@@ -33,7 +29,7 @@ class Views extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Expanded(
             flex: 2,
@@ -43,13 +39,14 @@ class Views extends StatelessWidget {
               scale: 2,
             ),
           ),
-          const SizedBox(
-            height: 5,
-          ),
+          // const SizedBox(
+          //   height: 2,
+          // ),
           Expanded(
             flex: 1,
             child: Text(
               itemModel.title.toString(),
+              style: TextStyle(fontSize: 13),
               textAlign: TextAlign.center,
             ),
           ),

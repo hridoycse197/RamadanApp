@@ -53,44 +53,45 @@ class _ShowMagfiratTime extends State<ShowMagfiratTime> {
                       Expanded(
                         flex: 1,
                         child: Container(
-                          height: double.infinity,
+                          alignment: Alignment.center,
+                          //height: double.infinity,
                           // color: Colors.blue,
                           child: Stack(
                             alignment: Alignment.center,
                             children: [
-                              Stack(
+                              Image.asset(
+                                items[index].calenderImage.toString(),
+                                alignment: Alignment.center,
+                                scale: 1.4,
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Image.asset(
-                                    items[index].calenderImage.toString(),
-                                    alignment: Alignment.center,
-                                    scale: 1.4,
+                                  const SizedBox(
+                                    height: 5,
                                   ),
-                                  Positioned(
-                                    top: height * 0.08,
-                                    left: width * 0.046,
-                                    child: Text(
-                                      monthanddate
-                                          .format(
-                                            DateTime.utc(2022, 4, index + 13),
-                                          )
-                                          .toString(),
-                                      style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.bold),
+                                  Text(
+                                    items[index].ramadanNumber.toString(),
+                                    textAlign: TextAlign.center,
+                                    // ignore: prefer_const_constructors
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    monthanddate
+                                        .format(
+                                          DateTime.utc(2022, 4, index + 13),
+                                        )
+                                        .toString(),
+                                    style: const TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                 ],
                               ),
-                              Positioned(
-                                  height: 25,
-                                  child: Text(
-                                    items[index].ramadanNumber.toString(),
-                                    // ignore: prefer_const_constructors
-                                    style: TextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ))
                             ],
                           ),
                         ),
