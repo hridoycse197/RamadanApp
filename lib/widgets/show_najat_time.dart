@@ -71,7 +71,7 @@ class _ShowNajatTime extends State<ShowNajatTime> {
                                     child: Text(
                                       monthanddate
                                           .format(
-                                            DateTime.utc(2022, 4, index + 21),
+                                            DateTime.utc(2022, 4, index + 23),
                                           )
                                           .toString(),
                                       style: TextStyle(
