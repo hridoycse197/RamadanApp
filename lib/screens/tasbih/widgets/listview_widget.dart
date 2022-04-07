@@ -32,142 +32,68 @@ class ListviewWidget extends StatelessWidget {
 
         TextWidget(
             textAlign: TextAlign.center,
-            text: Datatext.tarabih_description_title,
+            text: Datatext.roja_vongo_title,
             color: AppColor.appbarcolor,
             fontsize: 22),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .04),
-          child: TextWidget(
-            textAlign: TextAlign.center,
-            text: Datatext.tarabih_description,
-            color: AppColor.black,
-            fontsize: 18,
-            fontWeight: FontWeight.normal,
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: Datatext.vongolist.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Card(
+                child: Container(
+                  width: double.infinity,
+                  child: Text(Datatext.vongolist[index]),
+                ),
+              );
+            },
           ),
         ),
-//tarabih niom
+//makruh
         TextWidget(
             textAlign: TextAlign.center,
-            text: Datatext.tarabih_niom_title,
+            text: Datatext.roja_makruh_title,
             color: AppColor.appbarcolor,
             fontsize: 22),
 
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .04),
-          child: TextWidget(
-            textAlign: TextAlign.center,
-            text: Datatext.tarabih_niom_description,
-            color: AppColor.black,
-            fontsize: 18,
-            fontWeight: FontWeight.normal,
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: Datatext.makruhlist.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Card(
+                child: Container(
+                  width: double.infinity,
+                  child: Text(Datatext.makruhlist[index]),
+                ),
+              );
+            },
           ),
         ),
 
-        //tarabih doa start
         TextWidget(
             textAlign: TextAlign.center,
-            text: Datatext.tarabih_doa_title,
+            text: Datatext.roja_makruh_title,
             color: AppColor.appbarcolor,
             fontsize: 22),
 
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .04),
-          child: TextWidget(
-            textAlign: TextAlign.center,
-            text: Datatext.tarabih_doa_description1,
-            color: AppColor.black,
-            fontsize: 18,
-            fontWeight: FontWeight.normal,
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: Datatext.makruhlist.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Card(
+                child: Container(
+                  width: double.infinity,
+                  child: Text(Datatext.makruhlist[index]),
+                ),
+              );
+            },
           ),
         ),
-//doa speak
-        IconButton(
-          onPressed: () {
-            playaudio(AssetLink.tarabih_namaj_audio);
-          },
-          icon: Icon(Icons.volume_up_outlined),
-        ),
-//doa arbi
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * .04),
-          child: TextWidget(
-            textAlign: TextAlign.center,
-            text: Datatext.tarabih_doa_arbi,
-            color: AppColor.black,
-            fontsize: 18,
-            fontWeight: FontWeight.normal,
-          ),
-        ),
-        //doa spelling
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * .04),
-          child: TextWidget(
-            textAlign: TextAlign.center,
-            text: Datatext.tarabih_doa_spelling,
-            color: AppColor.black,
-            fontsize: 18,
-            fontWeight: FontWeight.normal,
-          ),
-        ),
-//doa description2
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * .04),
-          child: TextWidget(
-            textAlign: TextAlign.center,
-            text: Datatext.tarabih_doa_description2,
-            color: AppColor.black,
-            fontsize: 18,
-            fontWeight: FontWeight.normal,
-          ),
-        ),
-
-//monajat start
-        TextWidget(
-            textAlign: TextAlign.center,
-            text: Datatext.tarabih_monajat_title,
-            color: AppColor.appbarcolor,
-            fontsize: 22),
-
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * .04),
-          child: TextWidget(
-            textAlign: TextAlign.center,
-            text: Datatext.tarabih_monajat_description,
-            color: AppColor.black,
-            fontsize: 18,
-            fontWeight: FontWeight.normal,
-          ),
-        ),
-//doa speak
-        IconButton(
-          onPressed: () {
-            playaudio(AssetLink.tarabih_monajat_audio);
-          },
-          icon: Icon(Icons.volume_up_outlined),
-        ),
-//doa arbi
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * .04),
-          child: TextWidget(
-            textAlign: TextAlign.center,
-            text: Datatext.tarabih_monajat_arbi,
-            color: AppColor.black,
-            fontsize: 18,
-            fontWeight: FontWeight.normal,
-          ),
-        ),
-        //doa spelling
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * .04),
-          child: TextWidget(
-            textAlign: TextAlign.center,
-            text: Datatext.tarabih_monajat_spelling,
-            color: AppColor.black,
-            fontsize: 18,
-            fontWeight: FontWeight.normal,
-          ),
-        ),
-        //doa end
       ],
     );
   }

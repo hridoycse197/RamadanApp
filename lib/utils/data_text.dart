@@ -55,6 +55,46 @@ class Datatext {
   static const String roja_vongo_appbar_title =
       'রোজা  ভঙ্গের কারণ এবং মাকরুহসমূহ';
   //roja vongo reason
+  static List vongolist = [
+    roja_vongo_reason1,
+    roja_vongo_reason2,
+    roja_vongo_reason3,
+    roja_vongo_reason4,
+    roja_vongo_reason5,
+    roja_vongo_reason6,
+    roja_vongo_reason7,
+    roja_vongo_reason8,
+    roja_vongo_reason9,
+    roja_vongo_reason10,
+    roja_vongo_reason11,
+  ];
+  static List makruhlist = [
+    roja_makruh_reason1,
+    roja_makruh_reason2,
+    roja_makruh_reason3,
+    roja_makruh_reason4,
+    roja_makruh_reason5,
+    roja_makruh_reason6,
+    roja_makruh_reason7,
+    roja_makruh_reason8,
+    roja_makruh_reason9,
+    roja_makruh_reason10,
+    roja_makruh_reason11,
+    roja_makruh_reason12,
+    roja_makruh_reason13,
+  ];
+
+  static List kazalist = [
+    roja_kajah_reason1,
+    roja_kajah_reason2,
+    roja_kajah_reason3,
+    roja_kajah_reason4,
+    roja_kajah_reason5,
+    roja_kajah_reason6,
+    roja_kajah_reason7,
+    roja_kajah_note,
+  ];
+
   static const String roja_vongo_title = '* রোজা  ভঙ্গের কারণসমূহ :\n';
 
   static const String roja_vongo_reason1 =
